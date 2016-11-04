@@ -54,22 +54,67 @@ var location3 = new Location("Satellite Theta MkII", "Tau Ypsilon", "Milky Way")
 
 $('document').ready(function() {
 
-  $('#delivery').click(function(event) {
-    event.preventDefault();
-    $('#carryoutSelection').hide();
+  function hideScreens() {
     $('#pizzaSelection').hide();
     $('#shoppingCart').hide();
     $('#thankYou').hide();
+  }
+
+  function clearTitleForms() {
+    $('#addressTitle1').text("");
+    $('#addressTitle2').text("Location: ");
+    $('#addressTitle3').text("Address: ");
+    $('#addressTitle4').text("City: ");
+    $('#addressTitle5').text("");
+    $('#addressTitle6').text("");
+  }
+
+  function clearValueForms() {
+    $('#address1').text("");
+    $('#address2').text("");
+    $('#address3').text("");
+    $('#address4').text("");
+    $('#address5').text("");
+    $('#address6').text("");
+  }
+
+  function initializeAddressTitles() {
+    $('#addressTitle1').text("Name: ");
+    $('#addressTitle2').text("Address: ");
+    $('#addressTitle3').text(" ");
+    $('#addressTitle4').text("City: ");
+    $('#addressTitle5').text("State: ");
+    $('#addressTitle6').text("Zip: ");
+  }
+
+  function populateCarryout(name, address, town) {
+    $('#address2').text(name);
+    $('#address3').text(address);
+    $('#address4').text(town);
+  }
+
+  function populateVerFields(selector, object) {
+    var i = 1;
+    for (var key in object) {
+      if (object.hasOwnProperty(key)) {
+        $('#' + selector + i).text(object[key]);
+        i++;
+      }
+    }
+  }
+
+  $('#delivery').click(function(event) {
+    event.preventDefault();
+    hideScreens();
+    $('#carryoutSelection').hide();
     $('#deliverySelection').fadeIn();
     resetForms();
   })
 
   $('#carryout').click(function(event) {
     event.preventDefault();
+    hideScreens();
     $('#deliverySelection').hide();
-    $('#pizzaSelection').hide();
-    $('#shoppingCart').hide();
-    $('#thankYou').hide();
     $('#carryoutSelection').fadeIn();
     resetForms();
   })
@@ -81,27 +126,16 @@ $('document').ready(function() {
     $('#addressHeader').text("Carry Out:");
     $('#carryout1').text("This order is for carryout.");
     $('#carryout2').text("You can pick up your pizza from the following location:");
-    $('#addressTitle1').text("");
-    $('#addressTitle2').text("Location: ");
-    $('#addressTitle3').text("Address: ");
-    $('#addressTitle4').text("City: ");
-    $('#addressTitle5').text("");
-    $('#addressTitle6').text("");
-    $('#address1').text("");
-    $('#address5').text("");
-    $('#address6').text("");
+    clearTitleForms();
+    clearValueForms();
     if (location === location1.locationName) {
-      $('#address2').text(location1.locationName);
-      $('#address3').text(location1.address);
-      $('#address4').text(location1.town);
+      populateCarryout(location1.locationName, location1.address, location1.town);
+
     } else if (location === location2.locationName) {
-      $('#address2').text(location2.locationName);
-      $('#address3').text(location2.address);
-      $('#address4').text(location2.town);
+      populateCarryout(location2.locationName, location2.address, location2.town);
+
     } else if (location === location3.locationName) {
-      $('#address2').text(location3.locationName);
-      $('#address3').text(location3.address);
-      $('#address4').text(location3.town);
+      populateCarryout(location3.locationName, location3.address, location3.town);
     }
     $('#carryoutSelection').hide();
   });
@@ -121,27 +155,17 @@ $('document').ready(function() {
     $('#carryout1').text("");
     $('#carryout2').text("");
     $('#addressHeader').text("Address");
-    $('#address1').text(userAddress.userName);
-    $('#address2').text(userAddress.address1);
-    $('#address3').text(userAddress.address2);
-    $('#address4').text(userAddress.city);
-    $('#address5').text(userAddress.state);
-    $('#address6').text(userAddress.zip);
-    $('#addressTitle1').text("Name: ");
-    $('#addressTitle2').text("Address: ");
-    $('#addressTitle3').text(" ");
-    $('#addressTitle4').text("City: ");
-    $('#addressTitle5').text("State: ");
-    $('#addressTitle6').text("Zip: ");
+    populateVerFields("address", userAddress);
+    initializeAddressTitles();
   });
 
   $('#pizzaSelection').submit(function(event) {
     event.preventDefault();
     $('#pizzaSelection').hide();
     var meats = [];
-   $('input:checkbox[name=meat]:checked').each(function() {
-     meats.push($(this).val());
-   })
+     $('input:checkbox[name=meat]:checked').each(function() {
+       meats.push($(this).val());
+     })
     var veggies = [];
     $('input:checkbox[name=veggie]:checked').each(function() {
       veggies.push($(this).val());
@@ -153,20 +177,14 @@ $('document').ready(function() {
       $('#cheeseSelect').val(),
       meats,
       veggies
-    )
-    $('#pizza1').text(userPizza.dough);
-    $('#pizza2').text(userPizza.pizzaSize);
-    $('#pizza3').text(userPizza.sauce);
-    $('#pizza4').text(userPizza.cheese);
-    $('#pizza5').text(userPizza.meats);
-    $('#pizza6').text(userPizza.veggies);
+    );
+    populateVerFields("pizza", userPizza);
     $('#finalCost').text(userPizza.cost());
     $('#shoppingCart').fadeIn();
   });
 
   $('#orderEdit').click(function(event) {
     event.preventDefault();
-
     $('#pizzaSelection').fadeIn();
     $('#shoppingCart').hide();
   });
