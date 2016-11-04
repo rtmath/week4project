@@ -1,0 +1,39 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: seagreen;
+}
+
+.jumbotron {
+  background-color: salmon;
+}
+
+.centered {
+  text-align: center;
+}
+
+.button {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.well {
+  background-color: salmon;
+  border-color: black;
+}
+
+.inner {
+  background-color: darksalmon;
+}
+
+#deliverySelection {
+  display: none;
+}
+
+#carryoutSelection {
+  display: none;
+}
+
+label {
+  margin-top: 5px;
+}
