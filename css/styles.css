@@ -10,6 +10,10 @@ body {
   background-repeat: no-repeat;
 }
 
+label {
+  margin-top: 5px;
+}
+
 .jumbotron {
   background: rgba(39, 73, 127, 0.7);
   padding: 0;
@@ -23,6 +27,10 @@ body {
 .button {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.topmargin {
+  margin-top: 20px;
 }
 
 .well {
@@ -43,6 +51,12 @@ body {
 #pageHeader {
   font-weight: bolder;
   font-size: 20pt;
+}
+
+#singleAlien {
+  /*float: left;*/
+  position: absolute;
+  left: 50px;
 }
 
 #shoppingAddress {
@@ -67,8 +81,4 @@ body {
 
 #thankYou {
   display: none;
-}
-
-label {
-  margin-top: 5px;
 }

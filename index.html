@@ -14,13 +14,13 @@
       <div class="row" id="orderSelection"> <!--Begin Row-->
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <div class="jumbotron centered">
+          <div class="jumbotron centered topmargin">
             <div>
               <img id="pplogo" src="img/pplanet.png" alt="pizza planet">
-              <span id="pageHeader">Welcome to Pizza Planet!</span>
+              <span id="pageHeader">Welcome to Pizza Planet!</span><br>
             </div>
           </div>
-          <div class="well">
+          <div class="well topmargin">
             <div class="centered">
                 <h3>How would you like to order?</h3>
               <button type="button" name="button" class="button btn btn-info" id="delivery">Delivery</button>
@@ -35,7 +35,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form  id="deliveryForm">
+              <form name="myForm" id="deliveryForm">
                 <fieldset>
                   <h3>Enter Your Address For Delivery:</h3>
                   <div class="form-group">
@@ -91,13 +91,13 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form id="carryoutForm">
+              <form name="myForm" id="carryoutForm">
                 <div class="form-group">
                   <label for="locationSelect">Choose location for pick-up:</label>
                   <select class="form-control" id="locationSelect">
-                    <option>Example Location 1</option>
-                    <option>Example Location 2</option>
-                    <option>Example Location 3</option>
+                    <option value="Spaceport VII">Spaceport VII</option>
+                    <option value="Spaceport IV">Spaceport IV</option>
+                    <option value="Satellite Theta MkII">Satellite Theta MkII</option>
                   </select>
                 </div>
                 <button type="submit" name="button" class="btn btn-info" id="carryoutSubmit">Carryout!</button>
@@ -112,7 +112,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form>
+              <form name="myForm">
                 <h3>Make your pizza:</h3>
                 <div class="form-group">
                   <label for="dough">Choose your dough:</label>
@@ -193,7 +193,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form id="finalizeOrder">
+              <form name="myForm" id="finalizeOrder">
                 <div class="form-group">
                   <label for="locationSelect">Please review your order:</label>
                     <h3>Address:</h3>
@@ -210,6 +210,7 @@
                     <span id="pizza4"></span><br>
                     <span id="pizza5"></span><br>
                     <span id="pizza6"></span>
+                    <img id="singleAlien" src="img/alien1.png" alt="an alien">
                     <h3>Total Cost:</h3>
                     <p>$<span id="finalCost"></span></p>
                 </div>
@@ -227,6 +228,8 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
+              <h3>Ooooooooo...</h3>
+              <img src="img/aliens.gif" alt="aliens" />
               <h3>Thank you for your order!</h3>
             </div>
           </div>
