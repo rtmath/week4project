@@ -11,6 +11,9 @@ $('document').ready(function() {
   })
   $('#deliveryForm').submit(function(event) {
     event.preventDefault();
+    $('#orderSelection').hide();
+    $('#deliverySelection').hide();
+    $('#pizzaSelection').show();
     // var userAddress = new Address(
     //   $('#formname').val(),
     //   $('#formaddress1').val(),
@@ -39,9 +42,13 @@ function Address (userName, address1, address2, city, state, zip) {
 
 function Pizza (dough, pizzaSize, sauce, cheese, meats, veggies) {
   this.dough = dough;
-  this.pizzaSize = size;
+  this.pizzaSize = pizzaSize;
   this.sauce = sauce;
   this.cheese = cheese;
   this.meats = meats;
   this.veggies = veggies;
+}
+
+Pizza.prototype.cost = function() {
+  console.log("Yum!");
 }
