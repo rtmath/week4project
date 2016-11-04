@@ -90,13 +90,11 @@
             <div class="inner well centered">
               <form>
                 <div class="form-group">
-                  <label for="exampleSelect1">Choose location for pick-up:</label>
-                  <select class="form-control" id="exampleSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <label for="locationSelect">Choose location for pick-up:</label>
+                  <select class="form-control" id="locationSelect">
+                    <option>Example Location 1</option>
+                    <option>Example Location 2</option>
+                    <option>Example Location 3</option>
                   </select>
                 </div>
                 <button type="submit" name="button" class="btn btn-info">Carryout!</button>
@@ -114,34 +112,71 @@
               <form>
                 <h3>Make your pizza:</h3>
                 <div class="form-group">
-                  <label for="exampleSelect1">Choose your dough:</label>
-                  <select class="form-control" id="exampleSelect1">
+                  <label for="dough">Choose your dough:</label>
+                  <select class="form-control" id="doughSelect">
                     <option>Hand tossed pizza</option>
                     <option>Gluten free</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleSelect1">Choose your Size:</label>
-                  <select class="form-control" id="exampleSelect1">
+                  <label for="sizeSelect">Choose your Size:</label>
+                  <select class="form-control" id="sizeSelect">
                     <option>Medium</option>
                     <option>Large</option>
                     <option>Family-size</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleSelect1">Choose your Sauce:</label>
-                  <select class="form-control" id="exampleSelect1">
+                  <label for="sauceSelect">Choose your Sauce:</label>
+                  <select class="form-control" id="sauceSelect">
                     <option>Marinara</option>
                     <option>Tomato</option>
                     <option>Buffalo</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleSelect1">Choose your Cheese:</label>
-                  <select class="form-control" id="exampleSelect1">
-                    <option>Hand tossed pizza</option>
-                    <option>Gluten free</option>
+                  <label for="cheeseSelect">Choose your Cheese:</label>
+                  <select class="form-control" id="cheeseSelect">
+                    <option>Cheddar</option>
+                    <option>American</option>
+                    <option>Pepperjack</option>
                   </select>
+                </div>
+                <div>
+                  <h4>Meats:</h4>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="pepperoni" value="option1"> Pepperoni
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="italianSausage" value="option2"> Italian Sausage
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="salami" value="option3"> Salami
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="meatball" value="option3"> Meatball
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="canadianBacon" value="option3"> Canadian Bacon
+                  </label>
+                </div>
+                <div>
+                  <h4>Veggies:</h4>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="mushrooms" value="option1"> Mushrooms
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="olives" value="option2"> Olives
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="peppers" value="option3"> Peppers
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="pineapple" value="option3"> Pineapple
+                  </label>
+                  <label class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="tomato" value="option3"> Tomato
+                  </label>
                 </div>
                 <button type="submit" name="button" class="btn btn-info">Order pizza!</button>
               </form>
