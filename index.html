@@ -10,17 +10,16 @@
   </head>
   <body>
     <div class="container">
-
       <div class="row" id="orderSelection"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="jumbotron centered topmargin">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="jumbotron centered topmargin min_width">
             <div>
               <img id="pplogo" src="img/pplanet.png" alt="pizza planet">
-              <span id="pageHeader">Welcome to Pizza Planet!</span><br>
+              <span id="pageHeader">Welcome to Pizza Planet!</span>
             </div>
           </div>
-          <div class="well topmargin">
+          <div class="well topmargin min_width">
             <div class="centered">
                 <h3>How would you like to order?</h3>
               <button type="button" name="button" class="button btn btn-info" id="delivery">Delivery</button>
@@ -31,10 +30,11 @@
         <div class="col-md-2"></div>
       </div> <!--End Row-->
       <div class="row" id="deliverySelection"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="well">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="well min_width">
             <div class="inner well centered">
+              <img id="planetDelivery" src="img/planetdelivery.jpg" alt="pizza planet delivery">
               <form name="myForm" id="deliveryForm">
                 <fieldset>
                   <h3>Enter Your Address For Delivery:</h3>
@@ -69,13 +69,13 @@
                     </div>
                     <label class="col-sm-2 control-label" for="numinput">Zip</label>
                     <div class="col-sm-4">
-                      <input type="number" name="zip" placeholder="Zip Code" class="form-control" id="formzip" required>
+                      <input type="number" name="zip" placeholder="Zip Code" class="form-control" id="formzip" maxlength="5" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-10 col-sm-offset-2">
-                      <div class="pull-left">
-                        <button type="submit" class="btn btn-info">Delivery!</button>
+                      <div class="pull-left text-center">
+                        <button type="submit" class="btn btn-info topmargin center-block">Set Coordinates for Pizza Airdrop!</button>
                       </div>
                     </div>
                   </div>
@@ -84,17 +84,17 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div> <!--End Row-->
       <div class="row" id="carryoutSelection"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="well">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="well min_width">
             <div class="inner well centered">
               <form name="myForm" id="carryoutForm">
                 <div class="form-group">
                   <label for="locationSelect">Choose location for pick-up:</label>
-                  <select class="form-control" id="locationSelect">
+                  <select class="form-control form-width" id="locationSelect">
                     <option value="Spaceport VII">Spaceport VII</option>
                     <option value="Spaceport IV">Spaceport IV</option>
                     <option value="Satellite Theta MkII">Satellite Theta MkII</option>
@@ -105,25 +105,25 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div> <!--End Row-->
       <div class="row" id="pizzaSelection"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="well">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="well min_width">
             <div class="inner well centered">
               <form name="myForm">
                 <h3>Make your pizza:</h3>
                 <div class="form-group">
                   <label for="dough">Choose your dough:</label>
-                  <select class="form-control" id="doughSelect">
+                  <select class="form-control form-width" id="doughSelect">
                     <option>Hand tossed pizza</option>
                     <option>Gluten free</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="sizeSelect">Choose your Size:</label>
-                  <select class="form-control" id="sizeSelect">
+                  <select class="form-control form-width" id="sizeSelect">
                     <option>Medium</option>
                     <option>Large</option>
                     <option>Family-size</option>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="form-group">
                   <label for="sauceSelect">Choose your Sauce:</label>
-                  <select class="form-control" id="sauceSelect">
+                  <select class="form-control form-width" id="sauceSelect">
                     <option>Marinara</option>
                     <option>Tomato</option>
                     <option>Buffalo</option>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="form-group">
                   <label for="cheeseSelect">Choose your Cheese:</label>
-                  <select class="form-control" id="cheeseSelect">
+                  <select class="form-control form-width" id="cheeseSelect">
                     <option>Cheddar</option>
                     <option>American</option>
                     <option>Pepperjack</option>
@@ -186,47 +186,74 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div> <!--End Row-->
       <div class="row" id="shoppingCart"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="well">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="well min_width">
             <div class="inner well centered">
               <form name="myForm" id="finalizeOrder">
                 <div class="form-group">
                   <label for="locationSelect">Please review your order:</label>
-                    <h3>Address:</h3>
-                    <span id="address1"></span><br>
-                    <span id="address2"></span><br>
-                    <span id="address3"></span><br>
-                    <span id="address4"></span><br>
-                    <span id="address5"></span><br>
-                    <span id="address6"></span>
+                    <div>
+                      <h3 id="addressHeader"></h3>
+                      <span id="carryout1"></span><br>
+                      <span id="carryout2"></span><br>
+                      <div style="text-align: center;">
+                          <div style="display: inline-block; text-align: right">
+                            <span id="addressTitle1"></span><br>
+                            <span id="addressTitle2"></span><br>
+                            <span id="addressTitle3"></span><br>
+                            <span id="addressTitle4"></span><br>
+                            <span id="addressTitle5"></span><br>
+                            <span id="addressTitle6"></span><br>
+                          </div>
+                          <div style="display: inline-block; text-align: left">
+                            <span id="address1"></span><br>
+                            <span id="address2"></span><br>
+                            <span id="address3"></span><br>
+                            <span id="address4"></span><br>
+                            <span id="address5"></span><br>
+                            <span id="address6"></span><br>
+                          </div>
+                      </div>
+                    </div>
                     <h3>Order:</h3>
-                    <span id="pizza1"></span><br>
-                    <span id="pizza2"></span><br>
-                    <span id="pizza3"></span><br>
-                    <span id="pizza4"></span><br>
-                    <span id="pizza5"></span><br>
-                    <span id="pizza6"></span>
+                    <div style="text-align: center;">
+                        <div style="display: inline-block; text-align: right">
+                          <span class="title" id="pizzaTitle1">Dough: </span><br>
+                          <span class="title" id="pizzaTitle2">Size: </span><br>
+                          <span class="title" id="pizzaTitle3">Sauce: </span><br>
+                          <span class="title" id="pizzaTitle4">Cheese: </span><br>
+                          <span class="title" id="pizzaTitle5">Meats: </span><br>
+                          <span class="title" id="pizzaTitle6">Veggies: </span><br>
+                        </div>
+                        <div style="display: inline-block; text-align: left">
+                          <span class="title" id="pizza1"></span><br>
+                          <span class="title" id="pizza2"></span><br>
+                          <span class="title" id="pizza3"></span><br>
+                          <span class="title" id="pizza4"></span><br>
+                          <span class="title" id="pizza5"></span><br>
+                          <span class="title" id="pizza6"></span><br>
+                        </div>
+                    </div>
                     <img id="singleAlien" src="img/alien1.png" alt="an alien">
                     <h3>Total Cost:</h3>
                     <p>$<span id="finalCost"></span></p>
                 </div>
                 <button id="orderEdit" name="button" class="btn btn-primary">Edit Order!</button>
                 <button type="submit" name="button" class="btn btn-info">Order!</button>
-
               </form>
             </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div> <!--End Row-->
       <div class="row" id="thankYou"> <!--Begin Row-->
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="well">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="well min_width">
             <div class="inner well centered">
               <h3>Ooooooooo...</h3>
               <img src="img/aliens.gif" alt="aliens" />
@@ -234,9 +261,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div> <!--End Row-->
-
     </div> <!--End Container-->
   </body>
 </html>

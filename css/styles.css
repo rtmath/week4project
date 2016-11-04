@@ -14,6 +14,11 @@ label {
   margin-top: 5px;
 }
 
+.form-width {
+  margin: 0 auto;
+  width: 85%;
+}
+
 .jumbotron {
   background: rgba(39, 73, 127, 0.7);
   padding: 0;
@@ -42,10 +47,45 @@ label {
   background-color: rgba(50, 93, 157, 0.7);
 }
 
+.float_inline {
+  display: inline-block;
+  text-align: left;
+}
+
+.min_width {
+  min-width: 700px;
+}
+
+.center-textalign {
+  text-align: center;
+}
+
+.inline-left {
+   float: left;
+   text-align: left;
+   overflow: hidden;
+}
+
+.inline-right {
+  float: right;
+  text-align: right;
+  overflow: hidden;
+}
+
+.title {
+  display: inline-block;
+}
+
 #pplogo {
   vertical-align: center;
   height: 200px;
   width: 200px;
+}
+
+#planetDelivery {
+  vertical-align: center;
+  height: 150px;
+  width: 150px;
 }
 
 #pageHeader {
@@ -59,26 +99,6 @@ label {
   left: 50px;
 }
 
-#shoppingAddress {
-  display: none;
-}
-
-#deliverySelection {
-  display: none;
-}
-
-#carryoutSelection {
-  display: none;
-}
-
-#pizzaSelection {
-  display: none;
-}
-
-#shoppingCart {
-  display: none;
-}
-
-#thankYou {
+#deliverySelection, #carryoutSelection, #pizzaSelection, #shoppingAddress, #shoppingCart, #thankYou {
   display: none;
 }
