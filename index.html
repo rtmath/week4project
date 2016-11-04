@@ -32,7 +32,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form  id="deliveryForm" onsubmit="return validateZip()">
+              <form  id="deliveryForm">
                 <fieldset>
                   <h3>Enter Your Address For Delivery:</h3>
                   <div class="form-group">
@@ -88,7 +88,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form>
+              <form id="carryoutForm">
                 <div class="form-group">
                   <label for="locationSelect">Choose location for pick-up:</label>
                   <select class="form-control" id="locationSelect">
@@ -97,7 +97,7 @@
                     <option>Example Location 3</option>
                   </select>
                 </div>
-                <button type="submit" name="button" class="btn btn-info">Carryout!</button>
+                <button type="submit" name="button" class="btn btn-info" id="carryoutSubmit">Carryout!</button>
               </form>
             </div>
           </div>
@@ -145,52 +145,77 @@
                 <div>
                   <h4>Meats:</h4>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="pepperoni" value="option1"> Pepperoni
+                    <input name="meat" class="form-check-input" type="checkbox" value=" Pepperoni" id="pepperoni"> Pepperoni
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="italianSausage" value="option2"> Italian Sausage
+                    <input name="meat" class="form-check-input" type="checkbox" value=" Italian Sausage" id="italianSausage"> Italian Sausage
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="salami" value="option3"> Salami
+                    <input name="meat" class="form-check-input" type="checkbox" value=" Salami" id="salami"> Salami
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="meatball" value="option3"> Meatball
+                    <input name="meat" class="form-check-input" type="checkbox" value=" Meatball" id="meatball"> Meatball
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="canadianBacon" value="option3"> Canadian Bacon
+                    <input name="meat" class="form-check-input" type="checkbox" value=" Canadian Bacon" id="canadianBacon"> Canadian Bacon
                   </label>
                 </div>
                 <div>
                   <h4>Veggies:</h4>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="mushrooms" value="option1"> Mushrooms
+                    <input name="veggie" class="form-check-input" type="checkbox" value=" Mushrooms" id="mushrooms"> Mushrooms
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="olives" value="option2"> Olives
+                    <input name="veggie" class="form-check-input" type="checkbox" value=" Olives" id="olives"> Olives
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="peppers" value="option3"> Peppers
+                    <input name="veggie" class="form-check-input" type="checkbox" value=" Peppers" id="peppers"> Peppers
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="pineapple" value="option3"> Pineapple
+                    <input name="veggie" class="form-check-input" type="checkbox" value=" Pineapple" id="pineapple"> Pineapple
                   </label>
                   <label class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="tomato" value="option3"> Tomato
+                    <input name="veggie" class="form-check-input" type="checkbox" value=" Tomato" id="tomato"> Tomato
                   </label>
                 </div>
-                <button type="submit" name="button" class="btn btn-info">Order pizza!</button>
+                <button type="submit" name="button" class="btn btn-info" id="orderPizza">Order pizza!</button>
               </form>
             </div>
           </div>
         </div>
         <div class="col-md-2"></div>
       </div> <!--End Row-->
-      <!-- <span id="output1"></span><br>
-      <span id="output2"></span><br>
-      <span id="output3"></span><br>
-      <span id="output4"></span><br>
-      <span id="output5"></span><br>
-      <span id="output6"></span> -->
+      <div class="row" id="shoppingCart"> <!--Begin Row-->
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="well">
+            <div class="inner well centered">
+              <form>
+                <div class="form-group">
+                  <label for="locationSelect">Please review your order:</label>
+                    <h3>Address:</h3>
+                    <span id="address1"></span><br>
+                    <span id="address2"></span><br>
+                    <span id="address3"></span><br>
+                    <span id="address4"></span><br>
+                    <span id="address5"></span><br>
+                    <span id="address6"></span>
+                    <h3>Order:</h3>
+                    <span id="pizza1"></span><br>
+                    <span id="pizza2"></span><br>
+                    <span id="pizza3"></span><br>
+                    <span id="pizza4"></span><br>
+                    <span id="pizza5"></span><br>
+                    <span id="pizza6"></span>
+                </div>
+                <button type="submit" name="button" class="btn btn-info">Order!</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div> <!--End Row-->
+
     </div> <!--End Container-->
   </body>
 </html>

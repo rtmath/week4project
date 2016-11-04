@@ -26,6 +26,10 @@ body {
   background-color: darksalmon;
 }
 
+#shoppingAddress {
+  display: none;
+}
+
 #deliverySelection {
   display: none;
 }
@@ -35,6 +39,10 @@ body {
 }
 
 #pizzaSelection {
+  display: none;
+}
+
+#shoppingCart {
   display: none;
 }
 
