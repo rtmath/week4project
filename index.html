@@ -15,13 +15,16 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <div class="jumbotron centered">
-            <h2>Welcome to Hizza Put</h2>
+            <div>
+              <img id="pplogo" src="img/pplanet.png" alt="pizza planet">
+              <span id="pageHeader">Welcome to Pizza Planet!</span>
+            </div>
           </div>
           <div class="well">
             <div class="centered">
                 <h3>How would you like to order?</h3>
-              <button type="button" name="button" class="button" id="delivery">Delivery</button>
-              <button type="button" name="button" class="button" id="carryout">Carry Out</button>
+              <button type="button" name="button" class="button btn btn-info" id="delivery">Delivery</button>
+              <button type="button" name="button" class="button btn btn-info" id="carryout">Carry Out</button>
             </div>
           </div>
         </div>
@@ -190,7 +193,7 @@
         <div class="col-md-8">
           <div class="well">
             <div class="inner well centered">
-              <form>
+              <form id="finalizeOrder">
                 <div class="form-group">
                   <label for="locationSelect">Please review your order:</label>
                     <h3>Address:</h3>
@@ -207,9 +210,24 @@
                     <span id="pizza4"></span><br>
                     <span id="pizza5"></span><br>
                     <span id="pizza6"></span>
+                    <h3>Total Cost:</h3>
+                    <p>$<span id="finalCost"></span></p>
                 </div>
+                <button id="orderEdit" name="button" class="btn btn-primary">Edit Order!</button>
                 <button type="submit" name="button" class="btn btn-info">Order!</button>
+
               </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div> <!--End Row-->
+      <div class="row" id="thankYou"> <!--Begin Row-->
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="well">
+            <div class="inner well centered">
+              <h3>Thank you for your order!</h3>
             </div>
           </div>
         </div>

@@ -44,6 +44,7 @@ $('document').ready(function() {
 
   $('#pizzaSelection').submit(function(event) {
     event.preventDefault();
+    $('#pizzaSelection').hide();
     var meats = [];
    $('input:checkbox[name=meat]:checked').each(function() {
      meats.push($(this).val());
@@ -66,8 +67,22 @@ $('document').ready(function() {
     $('#pizza4').text(userPizza.cheese);
     $('#pizza5').text(userPizza.meats);
     $('#pizza6').text(userPizza.veggies);
+    $('#finalCost').text(userPizza.cost());
     $('#shoppingCart').show();
   });
+
+  $('#orderEdit').click(function(event) {
+    event.preventDefault();
+
+    $('#pizzaSelection').show();
+    $('#shoppingCart').hide();
+    console.log("Done!");
+  });
+
+  $('#finalizeOrder').submit(function(event) {
+    event.preventDefault();
+    $('#thankYou').show();
+  })
 });
 
 function Address (userName, address1, address2, city, state, zip) {
@@ -86,6 +101,7 @@ function Pizza (dough, pizzaSize, sauce, cheese, meats, veggies) {
   this.cheese = cheese;
   this.meats = meats;
   this.veggies = veggies;
+  var toppings = this.meats.length;
 }
 
 function chainLocation (address, city, state, zip) {
@@ -96,5 +112,12 @@ function chainLocation (address, city, state, zip) {
 }
 
 Pizza.prototype.cost = function() {
-  console.log("Yum!");
+  var baseCost = 5;
+  for (i = 0; i < this.meats.length; i++) {
+    baseCost *= 1.1;
+  }
+  for (i = 0; i < this.veggies.length; i++) {
+    baseCost *= 1.1;
+  }
+  return Math.round(baseCost);
 }
